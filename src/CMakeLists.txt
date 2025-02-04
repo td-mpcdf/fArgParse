@@ -25,7 +25,7 @@ set(srcs
 
 set (dest "FARGPARSE-${FARGPARSE_VERSION_MAJOR}.${FARGPARSE_VERSION_MINOR}")
 
-add_library(fargparse STATIC ${srcs})
+add_library(fargparse SHARED ${srcs})
 target_include_directories (fargparse PUBLIC
   $<BUILD_INTERFACE:${FARGPARSE_BINARY_DIR}/mod>
   $<INSTALL_INTERFACE:${dest}/include>
